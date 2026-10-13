@@ -1,9 +1,4 @@
 package br.edu.faculdade.lequedevagas.model;
 
-public record Pessoa(
-        Long id,
-        String nome,
-        String email,
-        String senha,
-        String perfil
-) {}
+public record Pessoa(String id, String nome, String email, String area, String senioridade) {
+}
