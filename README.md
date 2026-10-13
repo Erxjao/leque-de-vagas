@@ -6,9 +6,9 @@ API REST em Spring Boot para consultar vagas, empresas, candidaturas e os númer
 
 | Frente | Responsável | Escopo |
 | --- | --- | --- |
-| 1 — Vaga | Lívio Rocha | Cadastro e consulta de vagas |
-| 2 — Empresa | Lívio Rocha | Empresas publicadoras de vagas |
-| 3 — Pessoa e candidatura | Lívio Rocha | Pessoas e candidaturas |
+| 1 — Vaga | João Lucas | Cadastro e consulta de vagas |
+| 2 — Empresa | Weslly Santos | Empresas publicadoras de vagas |
+| 3 — Pessoa e candidatura | Lucas Moreira | Pessoas e candidaturas |
 | 4 — Busca e números | Lívio Rocha | Estatísticas do catálogo e revisão das entregas |
 
 ## Como executar
