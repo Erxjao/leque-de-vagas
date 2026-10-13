@@ -1,7 +1,7 @@
 package br.edu.faculdade.lequedevagas.service;
 
-import br.edu.faculdade.lequedevagas.model.Vaga;
 import br.edu.faculdade.lequedevagas.Repository.VagaRepository;
+import br.edu.faculdade.lequedevagas.model.Vaga;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,10 +16,12 @@ public class VagaService {
     }
 
     public List<Vaga> listar() {
-        return vagaRepository.listar();
+        return vagaRepository.todas();
     }
 
-    public Vaga buscarPorId(Long id) {
-        return vagaRepository.buscarPorId(id);
+    public List<Vaga> buscarPorId(String id) {
+        return vagaRepository.todas().stream()
+                .filter(vaga -> vaga.id().equals(id))
+                .toList();
     }
 }

@@ -25,7 +25,7 @@ public class VagaController {
     }
 
     @GetMapping("/{id}")
-    public Vaga buscarPorId(@PathVariable Long id) {
+    public List<Vaga> buscarPorId(@PathVariable String id) {
         return vagaService.buscarPorId(id);
     }
 }
