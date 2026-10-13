@@ -20,15 +20,15 @@ public class EstatisticasService {
     }
 
     public Estatisticas calcular() {
-        List<Vaga> vagas = vagaRepository.listar();
+        List<Vaga> vagas = vagaRepository.todas();
         Map<String, Long> porArea = vagas.stream()
-                .collect(Collectors.groupingBy(Vaga::getArea, LinkedHashMap::new, Collectors.counting()));
+                .collect(Collectors.groupingBy(Vaga::area, LinkedHashMap::new, Collectors.counting()));
         Map<String, Long> porSenioridade = vagas.stream()
-                .collect(Collectors.groupingBy(Vaga::getSenioridade, LinkedHashMap::new, Collectors.counting()));
+                .collect(Collectors.groupingBy(Vaga::senioridade, LinkedHashMap::new, Collectors.counting()));
 
         return new Estatisticas(
                 vagas.size(),
-                vagas.stream().filter(Vaga::isAceitaIniciante).count(),
+                vagas.stream().filter(Vaga::aceitaIniciante).count(),
                 porArea,
                 porSenioridade
         );
